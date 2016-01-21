@@ -20,7 +20,7 @@ module.exports = function(source) {
       templates.push("import '" + templateRelativePath + "'")
     })
 
-    source = source + '\n\n' + templates.join('\n')
+    source += '\n\n' + templates.join('\n')
 
   } catch(err) {
     if (err.errno === 34) {
