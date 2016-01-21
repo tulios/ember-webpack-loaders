@@ -1,6 +1,7 @@
 # Ember Webpack Loaders
 
 A set of webpack loaders to help with ember integration.
+
 Check the example app here: https://github.com/tulios/ember-webpack-example
 
 ## Install
@@ -33,19 +34,19 @@ Apply this set of loaders to your `webpack.config.js`:
 
 ## Options
 
-### ember-webpack-loaders/htmlbars-loader
+#### for ember-webpack-loaders/htmlbars-loader
 
-* _appPath_: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
-* _templateCompiler_: default 'components-ember/ember-template-compiler.js'
+* __appPath__: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
+* __templateCompiler__: default 'components-ember/ember-template-compiler.js'
 
-### ember-webpack-loaders/inject-templates-loader
+#### for ember-webpack-loaders/inject-templates-loader
 
-* _appPath_: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
+* __appPath__: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
 
-### ember-webpack-loaders/inject-modules-loader
+#### for ember-webpack-loaders/inject-modules-loader
 
-* _appPath_: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
-* _appVar_: Variable name of your `Ember.Application`. Default `App`
+* __appPath__: Path for your ember app. Default assuming `webpack.config.js` in root folder and `./app`
+* __appVar__: Variable name of your `Ember.Application`. Default `App`
 
 Example:
 
