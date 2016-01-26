@@ -21,6 +21,7 @@ module.exports = function(source) {
   projectLookup.resolve('mixins',      'Mixin')
   projectLookup.resolve('models',      'Model')
   projectLookup.resolve('routes',      'Route')
+  projectLookup.resolve('services',    'Service')
   projectLookup.resolve('controllers', 'Controller')
 
   source += '\n\n' + projectLookup.imports.join('\n')
