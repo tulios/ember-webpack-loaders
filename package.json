@@ -1,6 +1,6 @@
 {
   "name": "ember-webpack-loaders",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of webpack loaders to help with ember integration",
   "main": "index.js",
   "scripts": {
