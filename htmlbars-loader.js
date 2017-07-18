@@ -12,8 +12,8 @@ var appPath
  *  - templateCompiler: default 'components-ember/ember-template-compiler.js'
  */
 module.exports = function(source) {
-  this.cacheable && this.cacheable()
-  var options = loaderUtils.parseQuery(this.query);
+	this.cacheable && this.cacheable()
+	var options = loaderUtils.getOptions();
   var appPath = (options.appPath || 'app').replace(/\/$/, '')
   var templatesFolder = path.join(appPath, 'templates')
 
