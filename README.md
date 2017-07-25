@@ -25,8 +25,21 @@ Apply this set of loaders to your `webpack.config.js`:
       },
       {
         test: /app\/index\.js/, // the main app file
-        loader: 'ember-webpack-loaders/inject-templates-loader!ember-webpack-loaders/inject-modules-loader'
-      }
+        use: [
+            {
+              loader: 'ember-webpack-loaders/inject-templates-loader',
+              options: {
+                appPath: './path/to/app',
+              }
+            },
+            {
+              loader: 'ember-webpack-loaders/inject-modules-loader',
+              options: {
+                appPath: './path/to/app',
+              }
+            }
+         ],
+       }
     ]
   }
 }
@@ -57,7 +70,7 @@ Example:
       {
         test: /app\/index\.js/,
         loader: 'ember-webpack-loaders/inject-templates-loader!ember-webpack-loaders/inject-modules-loader',
-        query: {
+        options: {
           appVar: 'MyProject'
         }
       }
