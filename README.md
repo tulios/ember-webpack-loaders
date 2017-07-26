@@ -6,6 +6,8 @@ Check the example app here: https://github.com/tulios/ember-webpack-example
 
 Check the rails 5.1 app using these loaders https://github.com/rajibahmed/ember-react-webpack-rails-demo
 
+Use VERSION 0.2.0 if you're using webpack1 https://github.com/tulios/ember-webpack-loaders/tree/0.2.0
+
 ## Install
 
 ```sh
