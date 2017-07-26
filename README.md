@@ -17,7 +17,7 @@ Apply this set of loaders to your `webpack.config.js`:
 ```js
 {
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.hbs$/,
         include: /app\/templates/, // or whatever directory you have
@@ -66,10 +66,17 @@ Example:
 ```js
 {
   module: {
-    loaders: [
+    rules: [
       {
         test: /app\/index\.js/,
-        loader: 'ember-webpack-loaders/inject-templates-loader!ember-webpack-loaders/inject-modules-loader',
+        use: [ 
+          {
+            loader: 'ember-webpack-loaders/inject-templates-loader'
+          },
+          {
+            loader: 'ember-webpack-loaders/inject-modules-loader',
+          }
+        ],
         options: {
           appVar: 'MyProject'
         }
