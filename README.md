@@ -4,6 +4,8 @@ A set of webpack loaders to help with ember integration.
 
 Check the example app here: https://github.com/tulios/ember-webpack-example
 
+Check the rails 5.1 app using these loaders https://github.com/rajibahmed/ember-react-webpack-rails-demo
+
 ## Install
 
 ```sh
