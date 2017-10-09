@@ -4,6 +4,10 @@ A set of webpack loaders to help with ember integration.
 
 Check the example app here: https://github.com/tulios/ember-webpack-example
 
+Check the rails 5.1 app using these loaders https://github.com/rajibahmed/ember-react-webpack-rails-demo
+
+Use VERSION 0.2.0 if you're using webpack1 https://github.com/tulios/ember-webpack-loaders/tree/0.2.0
+
 ## Install
 
 ```sh
@@ -17,7 +21,7 @@ Apply this set of loaders to your `webpack.config.js`:
 ```js
 {
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.hbs$/,
         include: /app\/templates/, // or whatever directory you have
@@ -25,8 +29,21 @@ Apply this set of loaders to your `webpack.config.js`:
       },
       {
         test: /app\/index\.js/, // the main app file
-        loader: 'ember-webpack-loaders/inject-templates-loader!ember-webpack-loaders/inject-modules-loader'
-      }
+        use: [
+            {
+              loader: 'ember-webpack-loaders/inject-templates-loader',
+              options: {
+                appPath: './path/to/app',
+              }
+            },
+            {
+              loader: 'ember-webpack-loaders/inject-modules-loader',
+              options: {
+                appPath: './path/to/app',
+              }
+            }
+         ],
+       }
     ]
   }
 }
@@ -53,11 +70,18 @@ Example:
 ```js
 {
   module: {
-    loaders: [
+    rules: [
       {
         test: /app\/index\.js/,
-        loader: 'ember-webpack-loaders/inject-templates-loader!ember-webpack-loaders/inject-modules-loader',
-        query: {
+        use: [ 
+          {
+            loader: 'ember-webpack-loaders/inject-templates-loader'
+          },
+          {
+            loader: 'ember-webpack-loaders/inject-modules-loader',
+          }
+        ],
+        options: {
           appVar: 'MyProject'
         }
       }

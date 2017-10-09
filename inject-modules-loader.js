@@ -9,7 +9,7 @@ var recursive = require('recursive-readdir-sync')
  *  - appVar: default App
  */
 module.exports = function(source) {
-  var options = loaderUtils.parseQuery(this.query);
+  var options = loaderUtils.getOptions(this);
   var appPath = (options.appPath || 'app').replace(/\/$/, '')
   appPath = path.resolve(appPath)
   var appVar = options.appVar || 'App'
